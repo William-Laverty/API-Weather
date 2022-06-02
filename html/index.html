@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <!-- Import Vue CDN -->
+        <script src="https://unpkg.com/vue@3"></script>
+        <!-- Import Single-File-Component Loader CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>Weather Home</title>
+    </head>
+<body>
+    <div id="app">
+        <!-- Hero container + navBar -->
+        <hero-cover selected="Home" onclick="window.location.href='#nameSection';"></hero-cover>
+        <!-- Hero div for centering of text -->
+        <div class="hero-text">
+            <h1>{{homePageResources.title}}</h1>
+        </div>
+        <div id="scroll-down">
+            <h2>&#8595;</h2>
+        </div>
+        <!-- Container wrapping cards -->
+        <div class="frame-container">
+            <!-- Controls content and way it shows -->
+            <div class="scrolling-content">
+                <!-- Flex-container set with wrap and growth -->
+                <div class="flex-container" id="nameSection">
+                    <!-- Card that grows bases on size of content and screen width -->
+                    <div class="card">
+                        <div class="gradient-border">
+                            <div class="content-wrapper">
+                                <h1><span class="material-symbols-outlined">sunny</span> Sunshine or Rain <span class="material-symbols-outlined">thunderstorm</span></h1>
+                                It turns out the weather is more than just hot or cold - it's a lot more! Now that the weather has gotten more complex, you need the help. This is where weather 2.0 comes in. It's the leading weather page for getting all the weather stats on the weather. </br></br> The difference between the first, outdated stop for forecasts and the most sought-after location is weather2.0’s cutting-edge technology and extensive data bank.
+                            </div>
+                            <img src="weatherLandscape.png" width="960" height="540"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Import App & sfcLoader -->
+    <script src="../script/script.js"></script>
+    <script src="../script/sfcLoader.js"></script>
+    <!-- Mount app -->
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+  </body>
+</html>
